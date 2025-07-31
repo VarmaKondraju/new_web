@@ -42,14 +42,39 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Since you accepted my apology,<br>you get a present now😙!</h1>
-    <p class="click-sign">🎁 Click the gift below</p>
-    <img src="gift.png" alt="Gift Box" class="gift-box" onclick="goToFinal()">
+ <div class="container">
+    <h1>Since you accepted my apology,<br>you get a present😙!</h1>
+    <p class="click-sign">🎁 Click the gift box below</p>
+    <img src="gift.png" alt="Gift Box" class="gift-box" onclick="showOptions()">
+
+    <div class="options" id="options">
+      <button onclick="selectGift('Kinderjoy')">Kinderjoy</button>
+      <button onclick="selectGift('Ice Cream')">Ice Cream</button>
+      <button onclick="selectGift('Biryani')">Biryani</button>
+    </div>
+
+    <p id="warning"></p>
+    <button id="nextBtn" onclick="goToFinal()">Next</button>
   </div>
 
   <script>
+    let selectedGift = null;
+
+    function showOptions() {
+      document.getElementById("options").style.display = "block";
+      document.getElementById("nextBtn").style.display = "block";
+    }
+
+    function selectGift(gift) {
+      selectedGift = gift;
+      document.getElementById("warning").textContent = `Selected: ${gift}`;
+    }
+
     function goToFinal() {
+      if (!selectedGift) {
+        document.getElementById("warning").textContent = "You definitely need to select one!";
+        return;
+      }
       window.location.href = "final.html";
     }
   </script>

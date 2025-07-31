@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You get a present now!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #fdfdf9;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .click-sign {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .gift-box {
+      width: 120px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .gift-box:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Since you accepted my apology,<br>you get a present now😙!</h1>
+    <p class="click-sign">🎁 Click the gift below</p>
+    <img src="gift.png" alt="Gift Box" class="gift-box" onclick="goToFinal()">
+  </div>
+
+  <script>
+    function goToFinal() {
+      window.location.href = "final.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Add this to the end of style.css */
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Apply animations */
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  animation: wiggle 2s infinite;
+}
+
+.dog {
+  width: 100px;
+  height: auto;
+  animation: bounce 2s infinite;
+}
+
+.container {
+  animation: fadeIn 2s ease-in;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+  margin-top: 15px;
+}

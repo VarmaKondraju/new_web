@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Your Gift</title>
+  <style>
+    body {
+      background-color: #fdfdf9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #000;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+    }
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Choose your gift 🎁</h1>
+    <button onclick="goToFinal('Kinderjoy')">Kinderjoy</button>
+    <button onclick="goToFinal('Ice Cream')">Ice Cream</button>
+    <button onclick="goToFinal('Biryani')">Biryani</button>
+  </div>
+
+  <script>
+    function goToFinal(gift) {
+      // Optional: you can store gift in localStorage or send to server here
+      window.location.href = "final.html";
+    }
+  </script>
+</body>
+</html>

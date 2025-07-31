@@ -47,36 +47,9 @@
     <p class="click-sign">🎁 Click the gift box below</p>
     <img src="gift.png" alt="Gift Box" class="gift-box" onclick="showOptions()">
 
-     <div class="container">
-    <h1>Choose your gift 🎁</h1>
-    <button onclick="goToFinal('Kinderjoy')">Kinderjoy</button>
-    <button onclick="goToFinal('Ice Cream')">Ice Cream</button>
-    <button onclick="goToFinal('Biryani')">Biryani</button>
-  </div>
-
-    <p id="warning"></p>
-    <button id="nextBtn" onclick="goToFinal()">Next</button>
-  </div>
-
   <script>
-    let selectedGift = null;
-
-    function showOptions() {
-      document.getElementById("options").style.display = "block";
-      document.getElementById("nextBtn").style.display = "block";
-    }
-
-    function selectGift(gift) {
-      selectedGift = gift;
-      document.getElementById("warning").textContent = `Selected: ${gift}`;
-    }
-
-    function goToFinal() {
-      if (!selectedGift) {
-        document.getElementById("warning").textContent = "You definitely need to select one!";
-        return;
-      }
-      window.location.href = "final.html";
+    function goToOptions() {
+      window.location.href = "gift-options.html";
     }
   </script>
 </body>

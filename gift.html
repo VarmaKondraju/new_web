@@ -47,11 +47,12 @@
     <p class="click-sign">🎁 Click the gift box below</p>
     <img src="gift.png" alt="Gift Box" class="gift-box" onclick="showOptions()">
 
-    <div class="options" id="options">
-      <button onclick="selectGift('Kinderjoy')">Kinderjoy</button>
-      <button onclick="selectGift('Ice Cream')">Ice Cream</button>
-      <button onclick="selectGift('Biryani')">Biryani</button>
-    </div>
+     <div class="container">
+    <h1>Choose your gift 🎁</h1>
+    <button onclick="goToFinal('Kinderjoy')">Kinderjoy</button>
+    <button onclick="goToFinal('Ice Cream')">Ice Cream</button>
+    <button onclick="goToFinal('Biryani')">Biryani</button>
+  </div>
 
     <p id="warning"></p>
     <button id="nextBtn" onclick="goToFinal()">Next</button>
